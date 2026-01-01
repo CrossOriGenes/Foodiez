@@ -49,11 +49,7 @@ Clone repo **foodiez**:
   npm install
   npm start
 ```
-#### *Environment Variables*
 
-To run this project, you will need to add the following environment variable(s) to your .env file in '/server' dir:
-
-`PORT = 8000`
 
 
 

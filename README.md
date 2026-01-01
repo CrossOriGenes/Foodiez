@@ -64,5 +64,5 @@ To run this project, you will need to add the following environment variable(s) 
 
 ### **Live Link**
 
-This project is available live over [here](https://foodiez.vercel.app)
+This project is available live over [here](https://foodiezeats.vercel.app/)
 

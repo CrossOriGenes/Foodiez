@@ -334,3 +334,30 @@ html {
     opacity: 0;
   }
 }
+
+/* TOASTER CSS */
+.Toastify__toast {
+  font-family: var(--geom-font);
+  width: 320px;
+  cursor: default;
+  padding-block: 0.5rem;
+}
+
+/* PAGE CONTENT DISABLER FOR PRINTING */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #reciept,
+  #reciept * {
+    visibility: visible;
+  }
+
+  #reciept {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

@@ -4,6 +4,15 @@ export const SLIDES: { id: string; src: string }[] = [
   { id: "2", src: "/images/slide_3.jpg" },
 ];
 
+export const cafeTables = Array.from({ length: 6 }, (_, row) =>
+  Array.from({ length: 5 }, (_, col) => {
+    const rowNumber = row + 1;
+    const colLetter = String.fromCharCode(65 + col);
+    return `${rowNumber}${colLetter}`;
+  })
+).flat();
+export const bookedTables = ["1A", "3E", "5D"];
+
 export const navs: { name: string; to: string }[] = [
   { name: "Hero", to: "hero" },
   { name: "About", to: "about" },
@@ -495,10 +504,71 @@ export function getToday() {
   return `${yyyy}-${mm}-${dd}`;
 }
 
+export function extractDate(date: string) {
+  const dt = new Date(date);
+  const dd = dt.getDate();
+  const mm = dt.getMonth() + 1;
+  const yy = dt.getFullYear() % 100;
+  return `${dd}/${mm}/${yy}`;
+}
+
+const MONTHS: string[] = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const DAYS: string[] = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+export function extractDate2(date: string) {
+  const dt = new Date(date);
+  const day = DAYS[dt.getDay()];
+  const dd = dt.getDate();
+  const mm = MONTHS[dt.getMonth()];
+  return `${day}, ${dd} ${mm}`;
+}
+
+export function extractTime(time: string) {
+  const t = time.split(":");
+  let hr = Number(t[0]);
+  let mm = t[1];
+  let ampm = hr >= 12 ? "PM" : "AM";
+  hr = hr > 12 ? hr - 12 : hr;
+  return `${hr}:${mm} ${ampm}`;
+}
+
 export function getCpyRtYr() {
   const yy = new Date().getFullYear();
   const yyNext = yy % 100;
   return `${yy}-${yyNext + 1}`;
+}
+
+export const SEATS_PER_TABLE = 4;
+export const TABLE_FEES = 50;
+export const MAINTENANCE = 5;
+export function calculateTables(
+  baseTable: string,
+  members: number,
+  allTables: string[],
+  reservedSet: Set<string>
+) {
+  const requiredTables = Math.ceil(members / SEATS_PER_TABLE);
+  const startIndex = allTables.indexOf(baseTable);
+  const selected: string[] = [];
+  for (let i = startIndex; i < allTables.length; i++) {
+    const table = allTables[i];
+    if (reservedSet.has(table)) continue;
+    selected.push(table);
+    if (selected.length === requiredTables) break;
+  }
+  return selected;
 }
 
 export interface FormData {

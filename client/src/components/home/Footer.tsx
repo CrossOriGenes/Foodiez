@@ -1,6 +1,6 @@
 import { Link as ScrollLink } from "react-scroll";
 import { useState, useRef, type FormEvent } from "react";
-import { getCpyRtYr } from "../utils/helpers";
+import { getCpyRtYr } from "../../utils/helpers";
 
 export const footerNavs: { name: string; to: string }[] = [
   { name: "Features", to: "features" },

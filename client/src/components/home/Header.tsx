@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
-import { navs } from "../utils/helpers";
+import { navs } from "../../utils/helpers";
 
 const Header = ({ isSticky }: { isSticky: boolean }) => {
   const [activeLink, setActiveLink] = useState<string>("hero");

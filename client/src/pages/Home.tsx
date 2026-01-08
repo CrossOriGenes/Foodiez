@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import About from "../components/About";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Testimonial from "../components/Testimonial";
-import FeaturedDishes from "../components/FeaturedDishes";
-import Features from "../components/Features";
-import SnacksMenu from "../components/SnacksMenu";
-import EventsSection from "../components/EventsSection";
-import TableReservation from "../components/TableReservation";
-import Footer from "../components/Footer";
-import GotoTopButton from "../components/GotoTopBtn";
+import About from "../components/home/About";
+import Header from "../components/home/Header";
+import Hero from "../components/home/Hero";
+import Testimonial from "../components/home/Testimonial";
+import FeaturedDishes from "../components/home/FeaturedDishes";
+import Features from "../components/home/Features";
+import SnacksMenu from "../components/home/SnacksMenu";
+import EventsSection from "../components/home/EventsSection";
+import TableReservation from "../components/home/TableReservation";
+import Footer from "../components/home/Footer";
+import GotoTopButton from "../components/home/GotoTopBtn";
 
 function Home() {
   const [isSticky, setSticky] = useState<boolean>(false);

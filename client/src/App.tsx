@@ -1,9 +1,8 @@
-import { lazy, useEffect, Suspense } from "react";
+import { useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AppLoader from "./pages/AppLoader";
-
-const Home = lazy(() => import("./pages/Home"));
+import AppRouter from "./pages/AppRouter";
 
 function App() {
   useEffect(() => {
@@ -19,11 +18,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Suspense fallback={<AppLoader />}>
-        <Home />
-      </Suspense>
-    </>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 

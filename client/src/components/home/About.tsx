@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 const About = () => {
   return (
     <section
@@ -41,11 +43,18 @@ const About = () => {
             the flavor — we've got your cravings covered.
           </p>
           <div className="w-full flex justify-center mt-12" data-aos="fade-up">
-            <button type="button" className="btn btn-outline">
+            <Link
+              to="reservation"
+              smooth={true}
+              spy
+              duration={500}
+              offset={0}
+              className="btn btn-outline"
+            >
               <strong className="uppercase text-white text-sm tracking-wider">
                 Get in touch
               </strong>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

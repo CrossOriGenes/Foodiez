@@ -8,7 +8,7 @@ function AppLoader() {
         <div className="bubble" />
         <div className="bubble" />
         <div className="bubble" />
-        <div id="area" className="sm:right-0 right-13.75">
+        <div id="area" className="sm:right-0 right-18.75">
           <div id="sides">
             <div id="pan" />
             <div id="handle" />

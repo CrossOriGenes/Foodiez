@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { events } from "../utils/helpers";
+import { events } from "../../utils/helpers";
 
 interface EventProp {
   title: string;

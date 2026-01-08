@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import { type FormData } from "../../utils/helpers";
 import ReservationForm from "./ReservationForm";
-import { type FormData } from "../utils/helpers";
 
 const TableReservation = () => {
+  const navigate = useNavigate();
   function handleTableReservationData(data: FormData) {
-    console.log(data);
+    navigate("reservation", { state: data });
   }
-  
+
   return (
     <section id="reservation" className="relative overflow-hidden min-h-screen">
       <div className="relative xl:p-25 md:p-20 p-15">
@@ -62,7 +64,7 @@ const TableReservation = () => {
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3675.6389271187486!2d88.37084907508762!3d22.889792979267053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDUzJzIzLjMiTiA4OMKwMjInMjQuMyJF!5e0!3m2!1sen!2sin!4v1766207256268!5m2!1sen!2sin"
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
+                  referrerPolicy="no-referrer"
                   className="absolute top-0 left-0 w-full h-full object-cover border-0"
                 />
               </div>

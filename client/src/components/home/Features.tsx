@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { features } from "../utils/helpers";
+import { features } from "../../utils/helpers";
 
 interface FeaturesProps {
   title: string;

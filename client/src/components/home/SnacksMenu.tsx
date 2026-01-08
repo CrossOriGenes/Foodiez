@@ -1,4 +1,4 @@
-import { menuData } from "../utils/helpers";
+import { menuData } from "../../utils/helpers";
 
 const SnacksMenu = () => {
   const fries = menuData
@@ -47,7 +47,10 @@ const SnacksMenu = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 sm:p-6 p-0 mt-18">
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               fries
             </h2>
             <ul className="w-full flex flex-col">
@@ -83,7 +86,10 @@ const SnacksMenu = () => {
             </ul>
           </div>
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               wraps
             </h2>
             <ul className="w-full flex flex-col">
@@ -121,7 +127,10 @@ const SnacksMenu = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 sm:p-6 p-0 mt-9">
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               snacks
             </h2>
             <ul className="w-full flex flex-col">
@@ -157,7 +166,10 @@ const SnacksMenu = () => {
             </ul>
           </div>
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               burgers
             </h2>
             <ul className="w-full flex flex-col">
@@ -195,7 +207,10 @@ const SnacksMenu = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 sm:p-6 p-0 mt-9">
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               pizza
             </h2>
             <ul className="w-full flex flex-col">
@@ -231,7 +246,10 @@ const SnacksMenu = () => {
             </ul>
           </div>
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               drinks
             </h2>
             <ul className="w-full flex flex-col">
@@ -269,7 +287,10 @@ const SnacksMenu = () => {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 sm:p-6 p-0 mt-9">
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               desserts
             </h2>
             <ul className="w-full flex flex-col">
@@ -305,7 +326,10 @@ const SnacksMenu = () => {
             </ul>
           </div>
           <div className="relative sm:px-6 px-0">
-            <h2 className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize">
+            <h2
+              className="font-extrabold sm:text-5xl text-4xl vibes-font capitalize"
+              data-aos="fade-in"
+            >
               beverages
             </h2>
             <ul className="w-full flex flex-col">
@@ -342,7 +366,11 @@ const SnacksMenu = () => {
           </div>
         </div>
         <div className="w-full flex justify-center my-12">
-          <button type="button" className="btn btn-outline group" data-aos="fade-up">
+          <button
+            type="button"
+            className="btn btn-outline group"
+            data-aos="fade-up"
+          >
             <span className="text-sm font-bold text-orange-500 group-hover:text-white tracking-wide uppercase mr-1">
               More Food Menu
             </span>

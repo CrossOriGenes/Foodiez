@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay } from "swiper/modules";
-import { quotes } from "../utils/helpers";
+import { quotes } from "../../utils/helpers";
 import "swiper/css";
 import "swiper/css/pagination";
 

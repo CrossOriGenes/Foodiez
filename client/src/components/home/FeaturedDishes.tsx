@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import { featuredSnacks } from "../utils/helpers";
+import { featuredSnacks } from "../../utils/helpers";
 
 const FeaturedDishes = () => {
   const containerVariants: Variants = {

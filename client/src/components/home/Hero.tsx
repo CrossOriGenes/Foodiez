@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { SLIDES } from "../utils/helpers";
+import { SLIDES } from "../../utils/helpers";
 
 const Hero = () => {
   const [slide, setSlide] = useState<number>(0);

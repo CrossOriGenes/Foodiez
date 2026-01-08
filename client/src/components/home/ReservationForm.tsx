@@ -1,5 +1,5 @@
 import React, { type FormEvent, useRef } from "react";
-import { getToday, type FormData } from "../utils/helpers";
+import { getToday, type FormData } from "../../utils/helpers";
 
 interface FormProps {
   onSubmit: (data: FormData) => void;
@@ -25,7 +25,7 @@ const ReservationForm: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
       message: messageRef.current?.value,
     };
     onSubmit(data);
-    formRef.current?.reset();
+    // formRef.current?.reset();
   }
 
   return (
@@ -116,7 +116,7 @@ const ReservationForm: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
           ref={messageRef}
           id="message"
           rows={5}
-          className="outline-0 border-0 bg-gray-400 p-2 rounded-sm"
+          className="outline-0 border-0 bg-gray-400 p-2 rounded-sm resize-none"
           placeholder="Your short Message here..."
           defaultValue=""
         />

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { toPng } from "html-to-image";
 import type { DataProp } from "../../utils/apiCallers";
@@ -45,6 +45,10 @@ const TableReservationPaymentSuccess: React.FC<SuccessProps> = ({
     window.print();
   }
 
+  useEffect(() => {
+    console.log("TABLE NOTE: ", data?.message ?? "NA");
+  }, []);
+
   return (
     <section className="overflow-hidden min-h-screen bg-white">
       <div className="relative xl:p-25 md:p-20 sm:p-15 p-8">
@@ -73,7 +77,10 @@ const TableReservationPaymentSuccess: React.FC<SuccessProps> = ({
                 </h2>
                 <p className="text-[13px] text-gray-500 font-medium -ml-7">
                   Reservation id:
-                  <strong className="sm:text-sm text-[12px] ml-1.5"> {bookingId}</strong>
+                  <strong className="sm:text-sm text-[12px] ml-1.5">
+                    {" "}
+                    {bookingId}
+                  </strong>
                 </p>
               </div>
             </div>

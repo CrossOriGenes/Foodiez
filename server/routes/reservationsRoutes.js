@@ -133,6 +133,7 @@ router.get("/get_reservation_details", async (req, res) => {
         timeToVisit: 1,
         tables: 1,
         totalMembers: 1,
+        message: 1,
         "paymentData.amountPaid": 1,
         "paymentData.paymentId": 1,
       }

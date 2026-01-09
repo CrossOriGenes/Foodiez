@@ -61,7 +61,8 @@ function Reservation() {
       chosenDateToVisit: state?.date,
       chosenTimeToVisit: state?.time,
       amountPaid: total,
-      members,  
+      members,
+      noteMsg: state?.message ?? "",
     });
     setTotalAmt(total);
     setShowConfirmPopup((prev) => !prev);

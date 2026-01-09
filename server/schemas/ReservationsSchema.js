@@ -40,6 +40,9 @@ const ReservationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  message: {
+    type: String,
+  },
   startTime: {
     type: Date,
     required: true,

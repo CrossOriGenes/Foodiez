@@ -17,7 +17,7 @@ router.post("/create_order", async (req, res) => {
       currency: "INR",
       receipt: `receipt_${generateId()}`,
     });
-    
+
     return res.json(order);
   } catch (e) {
     console.log(e);
@@ -36,6 +36,7 @@ router.post("/table_reservation/verify", async (req, res) => {
       time,
       amountPaid,
       members,
+      message,
       razorpay_order_id,
       razorpay_payment_id,
       razorpay_signature,
@@ -87,6 +88,10 @@ router.post("/table_reservation/verify", async (req, res) => {
       startTime: start,
       endTime: end,
       totalMembers: members,
+      message:
+        message === "" || message.trim().length === 0 || message === undefined
+          ? ""
+          : message,
       paymentData: {
         paymentId: razorpay_payment_id,
         bookingId: razorpay_order_id,

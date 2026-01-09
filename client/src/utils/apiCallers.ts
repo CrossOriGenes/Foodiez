@@ -1,4 +1,3 @@
-// const BASE_URL = "https://foodiez-hnap.onrender.com/api";
 const BASE_URL = import.meta.env.VITE_API_URL!;
 
 export interface CreateTTLPayload {
@@ -32,6 +31,7 @@ export interface UserDataPayload {
   chosenTimeToVisit: string;
   amountPaid: number;
   members: number;
+  noteMsg: string;
 }
 export interface RazorpayOrder {
   id: string;
@@ -49,6 +49,7 @@ export interface VerifyPaymentPayload {
   tables?: string[];
   date?: string;
   time?: string;
+  message?: string;
 }
 export interface VerifyResponse {
   msg: string;
@@ -62,6 +63,7 @@ export interface DataProp {
   dateToVisit?: string;
   timeToVisit?: string;
   totalMembers?: number;
+  message?: string;
   paymentData?: {
     paymentId: string;
     amountPaid: number;
@@ -192,6 +194,7 @@ export const openRazorpayCheckout = (
           time: userData.chosenTimeToVisit,
           amountPaid: userData.amountPaid,
           members: userData.members,
+          message: userData.noteMsg,
         };
 
         const data = await verifyPayment(verifyPayload);

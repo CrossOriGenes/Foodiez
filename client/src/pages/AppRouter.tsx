@@ -14,10 +14,6 @@ function AppRouter() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // useEffect(() => {
-  //   console.log("API BASE: ", import.meta.env.VITE_API_URL)
-  // })
-
   return (
     <Routes>
       <Route

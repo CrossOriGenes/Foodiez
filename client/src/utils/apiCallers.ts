@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL!;
 
 export interface CreateTTLPayload {
   baseTable: string;
@@ -171,7 +171,7 @@ export const openRazorpayCheckout = (
   onError?: (err: unknown) => void
 ) => {
   const options = {
-    key: import.meta.env.VITE_RAZORPAY_KEY,
+    key: import.meta.env.VITE_RAZORPAY_KEY!,
     amount: order.amount,
     currency: order.currency,
     order_id: order.id,

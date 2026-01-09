@@ -24,9 +24,9 @@ function AppRouter() {
           </Suspense>
         }
       />
-      <Route path="reservation" element={<Reservation />} />
-      <Route path="reservation/success" element={<TableReservationSuccess />} />
-      <Route path="our-menu" element={<FoodMenu />} />
+      <Route path="/reservation" element={<Reservation />} />
+      <Route path="/reservation/success" element={<TableReservationSuccess />} />
+      <Route path="/our-menu" element={<FoodMenu />} />
     </Routes>
   );
 }

@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { menuData } from "../../utils/helpers";
 
 const SnacksMenu = () => {
+  const navigate = useNavigate();
   const fries = menuData
     .filter((food) => food.category === "fries")
     .slice(0, 5);
@@ -370,6 +372,7 @@ const SnacksMenu = () => {
             type="button"
             className="btn btn-outline group"
             data-aos="fade-up"
+            onClick={() => navigate("our-menu")}
           >
             <span className="text-sm font-bold text-orange-500 group-hover:text-white tracking-wide uppercase mr-1">
               More Food Menu
